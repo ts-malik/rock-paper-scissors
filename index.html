@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+    body {
+        padding: 0 100px;
+    }
+    .gameResult {
+        color: white
+    }
+    .resultParas {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 10px 0;
+    }
+    .resultParas p {
+        margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Rock Paper Scissors</h1>
+
+  <form>
+    <label for="guessField">Enter a guess: </label>
+      <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+  </form>
+
+  <div class="resultParas">
+    <p class="playerGuess"></p>
+    <p class ="computerGuess"></p>
+    <p class="gameResult"></p>
+  </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
