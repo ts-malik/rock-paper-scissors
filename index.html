@@ -13,8 +13,8 @@
     body {
         padding: 0 100px;
     }
-    .gameResult {
-        color: white
+    .roundResult {
+        color: white;
     }
     .resultParas {
         display: flex;
@@ -33,16 +33,17 @@
 
   <h1>Rock Paper Scissors</h1>
 
-  <form>
+  <div class="form">
     <label for="guessField">Enter a guess: </label>
       <input type="text" id="guessField" class="guessField">
       <input type="submit" value="Submit guess" class="guessSubmit">
-  </form>
+  </div>
 
   <div class="resultParas">
+    <p class="rounds"></p>
     <p class="playerGuess"></p>
     <p class ="computerGuess"></p>
-    <p class="gameResult"></p>
+    <p class="roundResult"></p>
   </div>
 
 </body>
