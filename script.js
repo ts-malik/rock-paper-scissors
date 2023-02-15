@@ -50,8 +50,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 let round = 1;
-let player = 0;
-let computer = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 function checkGuess() {
 
@@ -60,14 +60,14 @@ function checkGuess() {
   }
 
   if (round > 4) {
-    if (player > computer) {
-      finalResult = `Congrats! You won ${player} rounds! The computer only won ${computer} rounds!`;
+    if (playerScore > computerScore) {
+      finalResult = `Congrats! You won ${playerScore} rounds! The computer won ${computerScore} rounds!`;
     }
-    else if (player < computer) {
-      finalResult = `Sorry! The computer won ${computer} rounds! You only won ${player} rounds!`;
+    else if (playerScore < computerScore) {
+      finalResult = `Sorry! The computer won ${computerScore} rounds! You won ${playerScore} rounds!`;
     }
     else {
-      finalResult = `You and the computer both won ${player} rounds!`;
+      finalResult = `You and the computer both won ${playerScore} rounds!`;
     }
     
     setGameOver(finalResult);
@@ -81,11 +81,11 @@ function checkGuess() {
 
   if (roundResult.textContent.includes("Win")) {
     score = "Win";
-    player++
+    playerScore++
   }
   else if (roundResult.textContent.includes("Lose")) {
     score = "Lose";
-    computer++
+    computerScore++
   }
   else if (roundResult.textContent.includes("Drew")) {
     score = "Draw";
